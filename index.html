@@ -251,7 +251,9 @@
   h1 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.4rem, 7vw, 5.5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
     line-height: 1.0;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
@@ -678,7 +680,9 @@
 
   .section-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -1058,7 +1062,9 @@
   .cta-title {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.6rem, 4.5vw, 3.5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
     letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -1153,6 +1159,10 @@
       font-size: 0.72rem;
     }
     .lang-flag { font-size: 0.8rem; }
+
+    /* Prevent any text from blowing out the page width */
+    .section-title { font-size: clamp(1.4rem, 5.5vw, 2rem) !important; }
+    .cta-title { font-size: clamp(1.5rem, 6vw, 2.2rem) !important; }
 
     /* Sections */
     .mockup-section, .features-section, .hiw-section .hiw-inner,
