@@ -251,7 +251,9 @@
   h1 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.4rem, 7vw, 5.5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
     line-height: 1.0;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
@@ -678,8 +680,10 @@
 
   .section-title {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.1;
     max-width: 500px;
@@ -1058,7 +1062,9 @@
   .cta-title {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 800;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.6rem, 4.5vw, 3.5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
     letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -1154,12 +1160,24 @@
     }
     .lang-flag { font-size: 0.8rem; }
 
+    /* Prevent any text from blowing out the page width */
+    .section-title { font-size: clamp(1.4rem, 5.5vw, 2rem) !important; }
+    .cta-title { font-size: clamp(1.5rem, 6vw, 2.2rem) !important; }
+
     /* Sections */
     .mockup-section, .features-section, .hiw-section .hiw-inner,
     .testimonials-section, .pricing-section .pricing-inner, .cta-section { padding: 4rem 1.5rem; }
     .logos-section { padding: 2rem 1.5rem; }
     .features-grid { grid-template-columns: 1fr; }
-    .hiw-steps { grid-template-columns: repeat(2, 1fr); }
+    .hiw-steps {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .hiw-step {
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto;
+    }
     .hiw-steps::before { display: none; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
