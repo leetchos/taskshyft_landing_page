@@ -1166,7 +1166,8 @@
 
     /* Sections */
     .mockup-section, .features-section, .hiw-section .hiw-inner,
-    .testimonials-section, .pricing-section .pricing-inner, .cta-section { padding: 4rem 1.5rem; }
+    .testimonials-section, .cta-section { padding: 4rem 1.5rem; }
+    .pricing-section .pricing-inner { padding: 4rem 0.75rem; }
     .logos-section { padding: 2rem 1.5rem; }
     .features-grid { grid-template-columns: 1fr; }
     .hiw-steps {
@@ -1180,7 +1181,11 @@
     }
     .hiw-steps::before { display: none; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      padding: 0 0.25rem;
+    }
+    .pricing-card { width: 100%; }
     .mockup-body { grid-template-columns: 1fr; }
     .mock-sidebar { display: none; }
 
